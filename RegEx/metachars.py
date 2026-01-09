@@ -94,9 +94,74 @@ text = "Mi numero de telefono es +34 123456789 apuntalo vale?"
 
 pattern = r"\+34 \d{9}"
 
-matches = re.findall(pattern, text)
+found = re.search(pattern, text)
 
-if(matches):
-    print(f"Numero español encontrado: {matches}")
+if (found):
+    print(f"Encontré el numero de telefono: {found.group()}")
+
+#-------------------------------
+# \w coincide con cualquier caracter alfanumerico (a-z, A-Z, 0-9, _)
+
+texto = "@@@@@el_rubius_69&%# "
+
+pattern = r"\w"
+
+found = re.findall(pattern, texto)
+print(found)
+
+
+#-------------------------------
+### \s: Coincide con cualquier espacio en blanco (espacio, tabulacion, salto de linea)
+
+texto = "Hola mundo\n Como estas? \t"
+
+pattern = r"\s"
+
+matches = re.findall(pattern, texto)
+
+print(matches)
+
+
+#-------------------------------
+### Coincide con el principio de una cadena
+# Detectar si un string comienza de una forma. 
+
+username = "@234_name"
+
+pattern = r"^\w" # Validar nombre de usuaurio 
+
+valid = re.search(pattern, username)
+
+if valid:
+    print("El nombre de usuario es valido")
 else: 
-    print("No")
+    print(f"{username} no es valido..")
+
+
+
+phone = "+343434 2332434435"
+
+pattern = r"\+\d{1,3} "
+
+valid = re.search(pattern, phone)
+
+if valid: 
+    print("El numero es valido")
+else: 
+    print("El numero no es valido")
+
+
+#-------------------------------
+## $: Coincide con el final de una cadena 
+
+
+text = "Hola, mundo"
+
+pattern = r"mufdfgfgndo$"
+
+valid = re.findall(pattern, text)
+
+if valid: 
+    print(f"Se encontró {valid} que es valido.")
+else: 
+    print(f"No se encontró '{pattern}' en el texto.")

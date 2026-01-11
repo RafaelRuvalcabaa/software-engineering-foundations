@@ -165,3 +165,6 @@ if valid:
     print(f"Se encontró {valid} que es valido.")
 else: 
     print(f"No se encontró '{pattern}' en el texto.")
+
+
+

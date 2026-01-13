@@ -177,3 +177,71 @@ pattern = r"manzana|p..a|\b\w{7}\b"
 found = re.findall(pattern, fruits)
 
 print(found)
+
+
+###-----------------------------
+#### Genera una regex para encontrar las palabras man fan y ban pero ignore el resto. 
+
+text = "man ran fan pan jan kan ñan ban onmiman"
+
+pattern = r"[mfb]an"
+
+found = re.findall(pattern,text)
+
+if found: 
+    print(found)
+else: 
+    print("No se encontró ningun patrón...")
+
+
+
+###-----------------------------
+#### Genera una regex para encontrar las palabras man fan y ban pero ignore el resto.
+# ------------------------------
+# Lo mismo pero que limite por ejemplo "onmiman" porque en el ejemplo anterior las pasa 
+
+text = "man ran fan pan jan kan ñan ban onmiman"
+
+pattern = r"[mfb]an\b"
+
+found = re.findall(pattern,text)
+
+if found: 
+    print(found)
+else: 
+    print("No se encontró ningun patrón...")
+
+
+
+###-----------------------------
+#### Genera una regex para encontrar los numeros del 1 al 2 solamente
+#------------------------------
+
+
+text = "22"
+
+pattern = r"[1-2]"
+
+found = re.findall(pattern,text)
+ 
+print(found)
+
+
+###-----------------------------
+# Ejercicio final: 
+# Mejorar esto: https://www.computerhope.com/jargon/r/regular-expression.png
+
+## Buscar corner case y arreglarlo: 
+
+"lo.que+sea@shopping.online"
+"michael@gov.co.uk"
+
+# []: coincide con cualquier caracter dentro de los corchetes
+
+text = "Hola mundo"
+
+pattern = r"[^aeiou]"
+
+found = re.findall(pattern, text)
+
+print(found)

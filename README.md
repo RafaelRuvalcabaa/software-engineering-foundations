@@ -1,4 +1,4 @@
-# Daily-commit-
-Everyday I'll do a commit in this repository in 2026 
+# Software-Engineering-Foundations
 
-Today only I made the repository and added the codes
+Training repository focused on strengthening core software engineering fundamentals, programming concepts, and practical API usage through hands-on exercises.
+
